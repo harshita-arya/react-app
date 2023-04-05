@@ -58,13 +58,8 @@ export default class UserDetails extends React.Component {
             }}
           >
 
-          <Stack
-          direction="row"
-          spacing={3}
-
-          alignItems="center"
-        >              
-          <TextField required fullWidth  label="First Name" variant="outlined"    value={values.firstName}
+                
+<TextField  fullWidth  label="First Name" variant="outlined"    value={values.firstName}
                     onChange={(e) => {
                       handleChange('firstName');
                     }} />
@@ -72,11 +67,10 @@ export default class UserDetails extends React.Component {
                     onChange={(e) => {
                       handleChange('middleName');
                     }} />
-            <TextField required fullWidth label="Last Name" variant="outlined"    value={values.lastName}
+            <TextField  fullWidth label="Last Name" variant="outlined"    value={values.lastName}
                     onChange={(e) => {
                       handleChange('lastName');
                     }} />
-            </Stack>
 
             <Stack
           direction="row"
@@ -84,7 +78,7 @@ export default class UserDetails extends React.Component {
 
           alignItems="center"
         >              
-          <TextField fullWidth  label="Email" variant="outlined"    value={values.email}
+          <TextField fullWidth  label="Email" variant="outlined" required   value={values.email}
                     onChange={(e) => {
                       handleChange('email');
                     }} />
