@@ -1,16 +1,6 @@
 import React from 'react';
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import AppBar from 'material-ui/AppBar';
-// import TextField from 'material-ui/TextField';
-// import RaisedButton from 'material-ui/RaisedButton';
-import styles from '../styles';
-import { AppBar, Button, Stack, TextField, Grid } from '@mui/material';
+import {  Button, Stack, TextField, Grid } from '@mui/material';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-
 export default class UserDetails extends React.Component {
   continue = e => {
     e.preventDefault();

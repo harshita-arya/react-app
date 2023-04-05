@@ -1,21 +1,15 @@
 import React from 'react';
-import UserDetails from './UserDetails';
-import Details from './Details';
+import FirstStep from './FirstStep';
+import OtpStep from './OtpStep';
 import Confirm from './Confirm';
 import Success from './Success';
 
 export default class Registeration extends React.Component {
   state = {
     step: 1,
-    firstName: '',
-    middleName:'',
-    lastName: '',
-    email: '',
+    healthId: '',
     password: '',
-    abhaAdress: '',
-    adhaarNumber: '',
     adhaarOtp: '',
-    mobileNumber: '',
     mobileOtp: '',
 
 
@@ -44,13 +38,13 @@ export default class Registeration extends React.Component {
 
   render() {
     const { step } = this.state;
-    const { firstName, lastName, email, occupation, city, bio } = this.state;
-    const values = { firstName, lastName, email, occupation, city, bio };
+    const { healthId, mobileOtp, adhaarOtp, password } = this.state;
+    const values = { healthId, mobileOtp, adhaarOtp, password};
 
     switch(step) {
       case 1:
         return (
-          <Details 
+          <FirstStep
             nextStep={this.nextStep}
             handleChange={this.handledChange}
             values={values}
@@ -58,7 +52,7 @@ export default class Registeration extends React.Component {
         );
       case 2:
         return (
-          <UserDetails 
+          <OtpStep
             nextStep={this.nextStep}
             previousStep={this.previousStep}
             handleChange={this.handledChange}
